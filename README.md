@@ -1,4 +1,4 @@
-<h1> **¿Qué es RandoMaps?** </h1>
+<h1> ¿Qué es RandoMaps? </h1>
 
 RandoMaps es una aplicación de viajes con destino aleatorio dentro
 del territorio nacional, con principal interés en los pueblos de la
