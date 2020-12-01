@@ -1,67 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 
-html{
-    background-image: url(https://images5.alphacoders.com/635/635948.jpg);
+html {
+  background-image: url(https://images5.alphacoders.com/635/635948.jpg);
 }
 
 img {
-    margin: 50px;
+  margin: 50px;
 }
 
 h1 {
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 150px;
-    margin-top: -280px;
-    margin-right: 110px;
-    color: white;
+  font-family: "ABeeZee", sans-serif;
+  font-size: 150px;
+  margin-top: -280px;
+  margin-right: 110px;
+  color: white;
 }
 
 h2 {
-    font-family: 'ABeeZee', sans-serif;
-    font-weight: bold;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    color: white;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: white;
 }
 
 h3 {
-    font-family: 'ABeeZee', sans-serif;
-    font-weight: lighter;
-    margin-left: 50px;
-    margin-right: 800px;
-    color: white;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: lighter;
+  margin-left: 50px;
+  margin-right: 800px;
+  color: white;
 }
 
 h4 {
-    font-family: 'ABeeZee', sans-serif;
-    margin-top: 150px;
-    margin-left: 500px;
-    color: white;
+  font-family: "ABeeZee", sans-serif;
+  margin-top: 150px;
+  margin-left: 500px;
+  color: white;
 }
 
 hr {
-    border-color: white;
+  border-color: white;
 }
 
 iframe {
-    margin-top: -275px;
-    margin-left: 750px;
+  margin-top: -275px;
+  margin-left: 750px;
 }
 
 button {
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 20px;
-    height: 50px;
-    margin-top: 25px;
-    margin-left: 120px;
-    border-radius: 5px;
-    background-color: white;
-    border-color: black;
+  font-family: "ABeeZee", sans-serif;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 25px;
+  margin-left: 120px;
+  border-radius: 5px;
+  background-color: white;
+  border-color: black;
 }
 
 a {
-    color: white;
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 20px;
+  color: white;
+  font-family: "ABeeZee", sans-serif;
+  font-size: 20px;
 }
