@@ -22,10 +22,7 @@ function registro() {
   var email = document.getElementById("email").value;
   var fecha = document.getElementById("fecha").value;
 
-  firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then(function (userCredential) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function (userCredential) {
       nuevoID = userCredential.user.uid;
       console.log(nuevoID);
       db.collection("usuarios").doc(nuevoID).set({
@@ -33,7 +30,7 @@ function registro() {
         apellidos: apellidos,
         usuario: usuario,
         email: email,
-        fecha: fecha
+        fecha: fecha,
       });
     })
     .catch(function (error) {
