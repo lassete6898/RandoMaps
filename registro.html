@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+
     <title>RandoMaps</title>
   </head>
 
@@ -43,39 +48,58 @@
           <div class="col-md-4">
             <br />
             <h4>Nombre</h4>
-            <input type="text" class="form-control" placeholder="Nombre" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              id="nombre"
+            />
             <br />
             <h4>Apellidos</h4>
-            <input type="text" class="form-control" placeholder="Apellidos" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Apellidos"
+              id="apellidos"
+            />
           </div>
           <div class="col-md-4">
             <br />
             <h4>Usuario</h4>
-            <input type="text" class="form-control" placeholder="Usuario" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Usuario"
+              id="usuario"
+            />
             <br />
             <h4>Contraseña</h4>
             <input
               type="password"
               class="form-control"
               placeholder="Contraseña"
+              id="password"
             />
           </div>
           <div class="col-md-4">
             <br />
             <h4>E-mail</h4>
-            <input type="email" class="form-control" placeholder="E-mail" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="E-mail"
+              id="email"
+            />
             <br />
             <h4>Fecha de nacimiento</h4>
-            <input type="date" class="form-control" />
+            <input type="date" class="form-control" id="fecha" />
           </div>
         </center>
         <div class="col-md-12">
           <center>
             <br />
             <br />
-            <button onclick="window.location.href='login.html'">
-              ¡Registrate ahora!
-            </button>
+            <button onclick="registro()">¡Registrate ahora!</button>
           </center>
         </div>
         <div class="col-md-12">
@@ -86,5 +110,6 @@
         </div>
       </div>
     </div>
+    <script src="js/registro.js"></script>
   </body>
 </html>
