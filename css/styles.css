@@ -36,3 +36,7 @@ button {
   background-color: white;
   border-color: black;
 }
+
+.form-control{
+  width: 250px;
+}
