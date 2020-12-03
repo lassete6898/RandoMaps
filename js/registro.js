@@ -12,7 +12,6 @@ firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
 var db = firebase.firestore();
-// var nuevoID;
 
 function registro() {
   var nombre = document.getElementById("nombre").value;
