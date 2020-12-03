@@ -12,12 +12,28 @@ firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
+window.onload = function () {
+  usuario();
+};
+
+function usuario() {
+  var logUser = sessionStorage.getItem("UID");
+  console.log(logUser);
+
+  // var usuario = document.getElementById('usuario');
+  // usuario.innerHTML = ' ';
+
+  // db.collection("users").get().then((querySnapshot) => {
+  //     querySnapshot.forEach((doc) => {
+  //       console.log(`${doc.id} => ${doc.data().nombre}`);
+  //       usuario.innerHTML += `<h2 id="usuario">Bienvenido, ${doc.data().nombre}</h2>`
+  //     });
+  //   });
+}
+
 function logout() {
   sessionStorage.removeItem("UID");
-  firebase
-    .auth()
-    .signOut()
-    .then(
+  firebase.auth().signOut().then(
       function () {
         location.href = "login.html";
       },
