@@ -1,3 +1,27 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyCToyik8gq3vMEkKCQdGJQtzw_-_Roskek",
+  authDomain: "randomaps-e23df.firebaseapp.com",
+  projectId: "randomaps-e23df",
+  storageBucket: "randomaps-e23df.appspot.com",
+  messagingSenderId: "249660335211",
+  appId: "1:249660335211:web:68adbbdb85ea149ed1bd2e",
+  measurementId: "G-CSH4J8ZT2M",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
+function check() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      location.href = "usuario.html";
+    } else {
+      location.href = "login.html";
+    }
+  });
+}
+
 function RandoMaps() {
   var array = [
     '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46778.3761173597!2d-8.57978906670195!3d42.88026250931573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe44e2dd71a7%3A0xe0146888c087e311!2sSantiago%20de%20Compostela%2C%20La%20Coru%C3%B1a!5e0!3m2!1ses!2ses!4v1602009422782!5m2!1ses!2ses" width="600" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
