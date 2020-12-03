@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
 var db = firebase.firestore();
-var nuevoID;
+// var nuevoID;
 
 function registro() {
   var nombre = document.getElementById("nombre").value;
@@ -25,24 +25,29 @@ function registro() {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
-    .then(function (userCredential) {
-      nuevoID = userCredential.user.uid;
-      console.log(nuevoID);
-      db.collection("usuarios").doc(nuevoID).set({
-        nombre: nombre,
-        apellidos: apellidos,
-        usuario: usuario,
-        email: email,
-        fecha: fecha,
-      });
-    })
-    .catch(function (error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+    .then((user) => {
+      // Signed in
       // ...
     })
-    .then(function () {
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ..
+    });
+
+  db.collection("users")
+    .add({
+      nombre: nombre,
+      apellidos: apellidos,
+      usuario: usuario,
+      email: email,
+      fecha: fecha,
+    })
+    .then(function (docRef) {
+      console.log("Document written with ID: ", docRef.id);
       location.href = "login.html";
+    })
+    .catch(function (error) {
+      console.error("Error adding document: ", error);
     });
 }
