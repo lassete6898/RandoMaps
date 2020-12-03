@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+
     <title>RandoMaps</title>
   </head>
 
@@ -26,11 +31,11 @@
         <div class="col-md-1">
           <center>
             <br />
-            <a href="index.html">
+            <a href="#" onclick="logout()">
               <img src="./images/userLogout.png" />
-              <a href="mailto:contacto@randomaps.com">
-                <img src="./images/userContact.png" />
-              </a>
+            </a>
+            <a href="mailto:contacto@randomaps.com">
+              <img src="./images/userContact.png" />
             </a>
           </center>
         </div>
@@ -116,5 +121,6 @@
         </div>
       </div>
     </div>
+    <script src="js/usuario.js"></script>
   </body>
 </html>

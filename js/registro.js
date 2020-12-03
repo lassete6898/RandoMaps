@@ -9,7 +9,7 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
 
 var db = firebase.firestore();
 var nuevoID;
@@ -22,7 +22,10 @@ function registro() {
   var email = document.getElementById("email").value;
   var fecha = document.getElementById("fecha").value;
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).then(function (userCredential) {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(function (userCredential) {
       nuevoID = userCredential.user.uid;
       console.log(nuevoID);
       db.collection("usuarios").doc(nuevoID).set({

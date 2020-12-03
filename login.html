@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+
     <title>RandoMaps</title>
   </head>
 
@@ -47,15 +52,21 @@
             <img src="./images/user.png" />
             <br />
             <br />
-            <input type="text" class="form-control" placeholder="Usuario" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="E-mail"
+              id="email"
+            />
             <br />
             <input
               type="password"
               class="form-control"
               placeholder="Contraseña"
+              id="password"
             />
             <br />
-            <button onclick="window.location.href='usuario.html'">
+            <button type="submit" onclick="login()" value="Login">
               Iniciar sesión
             </button>
           </center>
@@ -68,5 +79,6 @@
         </div>
       </div>
     </div>
+    <script src="js/login.js"></script>
   </body>
 </html>
