@@ -20,6 +20,20 @@ function usuario() {
   var logUser = sessionStorage.getItem("UID");
   console.log(logUser);
 
+  var usuario = document.getElementById('usuario');
+  usuario.innerHTML = '';
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      console.log(email = user.email);
+      console.log(`${user.uid} => ${user.email}`);
+      usuario.innerHTML += `<h2 id="usuario">Bienvenid@, ${user.email}</h2>`
+    } else {
+      // No user is signed in.
+    }
+  });
+
   // var usuario = document.getElementById('usuario');
   // usuario.innerHTML = ' ';
 
